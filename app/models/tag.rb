@@ -8,6 +8,6 @@
 #  updated_at :datetime         not null
 #
 class Tag < ApplicationRecord
-  has_many :board_tag_relations
+  has_many :board_tag_relations, dependent: :delete_all
   has_many :articles, through: :article_tag_relations
 end
