@@ -6,13 +6,20 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @article = Article.new(flash[:article])
   end
 
   def create
-    article = Article.create(article_params)
-    flash[:notice] = "「#{article.title}」の記事作成しました"
-    redirect_to article
+    article = Article.new(article_params)
+    if article.save
+      flash[:notice] = "「#{article.title}」の記事作成しました"
+      redirect_to article
+    else
+      redirect_to new_article_path, flash: {
+        article: article,
+        error_messages: article.errors.full_messages
+      }
+    end
   end
 
   def show
