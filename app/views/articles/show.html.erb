@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center mt-4 mb-4">
-  <div class="ml-auto boards__linkBox">
+  <div class="ml-auto articles__linkBox">
     <%= link_to '記事一覧', articles_path, class: 'btn btn-outline-dark' %>
     <%= link_to '編集', edit_article_path(@article), class: 'btn btn-outline-dark' %>
   </div>
@@ -12,3 +12,4 @@
 <% end %>
 
 <%= render @article %>
+<%= render partial: 'comment_form', locals: { comment: @comment } %>
