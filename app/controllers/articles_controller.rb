@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def create
     article = Article.create(article_params)
+    flash[:notice] = "「#{article.title}」の記事作成しました"
     redirect_to article
   end
 
@@ -27,7 +28,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.delete
-    redirect_to articles_path
+    redirect_to articles_path, flash: { notice: "「#{@article.title}」の記事削除しました" }
   end
 
   private
