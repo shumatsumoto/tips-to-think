@@ -12,4 +12,10 @@
 <% end %>
 
 <%= render @article %>
-<%= render partial: 'comment_form', locals: { comment: @comment } %>
+
+<div class="p-comment__list">
+  <div class="p-commment_listTitle">コメント</div>
+  <%= render @article.comments %>
+</div>
+
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
