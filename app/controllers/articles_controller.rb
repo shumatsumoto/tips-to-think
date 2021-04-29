@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_target_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.page(params[:page])
+    @articles = params[:tag_id].present? ? Tag.find(params[:tag_id]).articles : Article.all
+    @articles = @articles.page(params[:page])
   end
 
   def new
