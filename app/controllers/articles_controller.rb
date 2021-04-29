@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_target_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
   end
 
   def new
