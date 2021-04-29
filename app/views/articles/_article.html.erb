@@ -1,6 +1,11 @@
 <div class="card">
   <div class="card-header">
     <h4><%= article.title %></h4>
+    <% article.tags.each do |tag| %>
+      <span class="badge badge-primary">
+        <%= tag.name %>
+      </span>
+    <% end %>
   </div>
   <div class="card-body">
     <p class="card-text"><%= simple_format(article.body) %></p>

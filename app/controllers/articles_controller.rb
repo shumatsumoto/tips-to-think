@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:name, :title, :body)
+      params.require(:article).permit(:name, :title, :body, tag_ids: [])
     end
 
     def set_target_article
