@@ -13,6 +13,7 @@
       <th>作成日時</th>
       <th>更新日時</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,7 @@
         <td><%= article.created_at.to_s(:datetime_jp) %></td>
         <td><%= article.updated_at.to_s(:datetime_jp) %></td>
         <td><%= link_to '詳細', article, class: 'btn btn-outline-dark' %></td>
+        <td><%= link_to '削除', article, class: 'btn btn-outline-dark', method: :delete %></td>
       </tr>
     <% end %>
 </table>
