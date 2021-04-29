@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center">
   <h1>記事一覧</h1>
   <div class="ml-auto articles__linkBox">
-    <a href="/articles/new" class="btn btn-outline-dark">新規作成</a>
+    <%= link_to '新規作成', new_article_path, class: 'btn btn-outline-dark' %>
   </div>
 </div>
 <table class="table table-hover articles__table">
@@ -12,16 +12,18 @@
       <th>作成者</th>
       <th>作成日時</th>
       <th>更新日時</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <th><%= article.id %></th>
+        <td><%= article.id %></td>
         <td><%= article.title %></td>
         <td><%= article.name %></td>
         <td><%= article.created_at.to_s(:datetime_jp) %></td>
         <td><%= article.updated_at.to_s(:datetime_jp) %></td>
+        <td><%= link_to '詳細', article, class: 'btn btn-outline-dark' %></td>
       </tr>
     <% end %>
 </table>
