@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_090506) do
+ActiveRecord::Schema.define(version: 2021_04_29_110445) do
+
+  create_table "article_tag_relations", charset: "utf8", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_article_tag_relations_on_article_id"
+    t.index ["tag_id"], name: "index_article_tag_relations_on_tag_id"
+  end
 
   create_table "articles", charset: "utf8", force: :cascade do |t|
     t.string "name"
@@ -29,5 +38,13 @@ ActiveRecord::Schema.define(version: 2021_04_29_090506) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
+  create_table "tags", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "article_tag_relations", "articles"
+  add_foreign_key "article_tag_relations", "tags"
   add_foreign_key "comments", "articles"
 end
