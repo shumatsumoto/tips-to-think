@@ -4,13 +4,4 @@
     <%= link_to '編集', edit_article_path(@article), class: 'btn btn-outline-dark' %>
   </div>
 </div>
-
-<div class="card">
-  <div class="card-header">
-    <h4><%= @article.title %></h4>
-  </div>
-  <div class="card-body">
-    <p class="card-text"><%= simple_format(@article.body) %></p>
-    <p class="text-right font-weight-bold mr-10"><%= @article.name %></p>
-  </div>
-</div>
+<%= render @article %>
