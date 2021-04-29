@@ -20,8 +20,8 @@
         <th><%= article.id %></th>
         <td><%= article.title %></td>
         <td><%= article.name %></td>
-        <td><%= article.created_at %></td>
-        <td><%= article.updated_at %></td>
+        <td><%= article.created_at.to_s(:datetime_jp) %></td>
+        <td><%= article.updated_at.to_s(:datetime_jp) %></td>
       </tr>
     <% end %>
 </table>
