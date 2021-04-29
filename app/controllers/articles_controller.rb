@@ -30,8 +30,15 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article.update(article_params)
-    redirect_to @article
+    if @article.update(article_params)
+      flash[:notice] = "「#{@article.title}」の記事編集しました"
+      redirect_to @article
+    else
+      redirect_back fallback_location: edit_article_url, flash: {
+        article: @article,
+        error_messages: @article.errors.full_messages
+      }
+    end
   end
 
   def destroy
