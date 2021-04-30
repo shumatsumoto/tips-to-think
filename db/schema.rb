@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_30_014547) do
+ActiveRecord::Schema.define(version: 2021_04_30_065350) do
 
   create_table "article_tag_relations", charset: "utf8", force: :cascade do |t|
     t.bigint "article_id", null: false
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_014547) do
     t.string "password_digest", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "birthday"
     t.index ["name"], name: "index_users_on_name", unique: true
   end
 
