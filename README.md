@@ -31,7 +31,7 @@ I created a simple Blog application.
 ## :hammer: Requirement
 
 - macOS
-- Docker
+- Docker 20.10.5
 - Rails 6.1.3.1
 - Ruby 2.7.1
 - MySql 5.7
