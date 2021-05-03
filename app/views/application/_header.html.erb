@@ -9,9 +9,11 @@
       <li class="nav-item">
         <%= header_link_item('ホーム', root_path) %>
       </li>
-      <li class="nav-item">
-        <%= header_link_item('記事一覧', articles_path) %>
-      </li>
+      <% if @current_user %>
+        <li class="nav-item">
+          <%= header_link_item('記事一覧', articles_path) %>
+        </li>
+      <% end %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ユーザー
