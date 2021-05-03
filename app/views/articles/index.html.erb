@@ -1,3 +1,9 @@
+<% if @current_user %>
+  <div class="mt-3">現在ログイン中のユーザー：<%= @current_user.name %></div>
+<% else %>
+  <div class="mt-3">現在ログインしていません</div>
+<% end %>
+
 <div class="d-flex align-items-center">
   <h1>記事一覧</h1>
   <div class="ml-auto articles__linkBox">
@@ -37,7 +43,11 @@
         <td><%= article.created_at.to_s(:datetime_jp) %></td>
         <td><%= article.updated_at.to_s(:datetime_jp) %></td>
         <td><%= link_to '詳細', article, class: 'btn btn-outline-dark' %></td>
-        <td><%= link_to '削除', article, class: 'btn btn-outline-dark', method: :delete %></td>
+        <% if article.name == @current_user.name %>
+          <td><%= link_to '削除', article, class: 'btn btn-outline-dark', method: :delete %></td>
+        <% else %>
+          <td></td>
+        <% end %>
       </tr>
     <% end %>
 </table>

@@ -18,7 +18,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if @current_user %>
-            <%= link_to 'マイページ', mypage_path, class: 'dropdown-item' %>
+            <%= link_to @current_user.name, mypage_path, class: 'dropdown-item' %>
             <%= link_to 'ログアウト', logout_path, method: :delete, class: 'dropdown-item' %>
           <% else %>
             <%= link_to '登録', new_user_path, class: 'dropdown-item' %>

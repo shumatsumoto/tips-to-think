@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_target_article, only: %i[show edit update destroy]
+  before_action :ensure_current_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = params[:tag_id].present? ? Tag.find(params[:tag_id]).articles : Article.all
@@ -12,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     article = Article.new(article_params)
+    article.name = current_user.name
     if article.save
       flash[:notice] = "「#{article.title}」の記事作成しました"
       redirect_to article
@@ -54,5 +56,12 @@ class ArticlesController < ApplicationController
 
     def set_target_article
       @article = Article.find(params[:id])
+    end
+
+    def ensure_current_user
+      @article = Article.find(params[:id])
+      if @article.name != current_user.name
+        redirect_to articles_path, flash: { notice: "権限がありません" }
+      end
     end
 end
