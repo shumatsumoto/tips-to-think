@@ -5,14 +5,14 @@
 <% end %>
 
 <h1>ユーザ一覧</h1>
-  <% @users.each do |user| %>
-    <dl>
-      <dt><%= "id: #{user.id}" %></dt>
-      <dd><%= "name: #{user.name}" %></dd>
-      <% if @current_user.following?(user) %>
-        <dd><%= link_to 'フォロー外す', unfollow_path(user.id), method: :post %></dd>
-      <% else %>
-        <dd><%= link_to 'フォローする', follow_path(user.id), method: :post %></dd>
-      <% end %>
-    </dl>
-  <% end %>
+<% @users.each do |user| %>
+  <dl>
+    <dt><%= "id: #{user.id}" %></dt>
+    <dd><%= "name: #{user.name}" %></dd>
+    <% if @current_user.following?(user) %>
+      <dd><%= link_to 'フォロー外す', unfollow_path(user.id), method: :post %></dd>
+    <% else %>
+      <dd><%= link_to 'フォローする', follow_path(user.id), method: :post %></dd>
+    <% end %>
+  </dl>
+<% end %>
