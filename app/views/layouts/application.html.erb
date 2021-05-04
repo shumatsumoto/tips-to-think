@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>Tips To Think</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
@@ -11,12 +11,24 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </head>
 
   <body>
     <%= render 'header' %>
-    <div class="container">
+
+    <div class="banner">
+      <div class="container">
+        <h1 class="logo-font">Tips To Think</h1>
+        <p>A place to share your Thinking.</p>
+      </div>
+    </div>
+
+    <div class="container content-area">
       <%= yield %>
     </div>
+
+    <%= render 'footer' %>
   </body>
 </html>

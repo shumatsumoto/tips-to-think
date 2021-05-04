@@ -42,11 +42,68 @@
   color: #fff !important;
   font-size: 0.7rem;
   font-weight: normal;
-  padding-top: 0.15rem;
-  padding-bottom: 0.15rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   white-space: nowrap;
   margin-right: 3px;
   margin-bottom: 0.2rem;
   display: inline-block;
   background-color: #818a91;
+}
+
+.banner {
+  color: #fff;
+  background: #5cb85c;
+  box-shadow: inset 0 8px 8px -8px rgb(0 0 0 / 30%),
+    inset 0 -8px 8px -8px rgb(0 0 0 / 30%);
+  padding: 2rem;
+
+  h1 {
+    text-shadow: 0px 1px 3px rgb(0 0 0 / 30%);
+    font-weight: 700 !important;
+    text-align: center;
+    font-size: 2.4rem;
+    padding-bottom: 0.5rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 300 !important;
+    margin-bottom: 0px;
+  }
+}
+
+.likes-count {
+  a {
+    color: #5cb85c;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+    border: 1px solid #5cb85c;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ion-icon {
+    color: #5cb85c;
+    font-size: 16px;
+    --ionicon-stroke-width: 16px;
+    vertical-align: middle;
+    margin-top: -0.2em;
+  }
+
+  a.active {
+    color: #fff;
+    background-color: #5cb85c;
+
+    ion-icon {
+      color: #fff;
+    }
+  }
 }
