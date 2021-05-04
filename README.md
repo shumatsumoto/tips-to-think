@@ -71,6 +71,7 @@ http://localhost:3000
 - [ゼロからはじめる Dockerによるアプリケーション実行環境構築](https://www.udemy.com/course/docker-k/)
 - [いいね機能の作成](https://freecamp.life/rails-favorite/)
 - [フォロー・フォロワー機能の実装](https://freecamp.life/rails-follow-follower/)
+- [必要だと気付いてもいなかったフロントエンド用リポジトリ7選](https://qiita.com/baby-degu/items/95a6b0018f46b0555f8c)
 
 ## :hatching_chick: Author
 
