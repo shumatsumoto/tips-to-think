@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_04_065548) do
+ActiveRecord::Schema.define(version: 2021_05_04_082925) do
 
   create_table "article_tag_relations", charset: "utf8", force: :cascade do |t|
     t.bigint "article_id", null: false
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 2021_05_04_065548) do
   create_table "likes", charset: "utf8", force: :cascade do |t|
     t.integer "article_id"
     t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "relationships", charset: "utf8", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
