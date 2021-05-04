@@ -3,20 +3,17 @@
 <%= form_with model: article do |f| %>
   <%= f.hidden_field :name %>
   <div class="form-group">
-    <%= f.label :title, 'Title' %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.text_field :title, placeholder: 'Title', class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :body, 'Content' %>
-    <%= f.text_area :body, class: 'form-control', rows: 10 %>
+    <%= f.text_area :body, placeholder: 'Content', class: 'form-control', rows: 4 %>
   </div>
   <div class="form-group">
-    <span>Tags</span>
     <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
       <div class="form-check">
         <%= tag.label class: 'form-check-label' do %>
           <%= tag.check_box class: 'form-check-input' %>
-          <%= tag.text %>
+          <span class="badge badge-default"><%= tag.text %></span>
         <% end %>
       </div>
     <% end %>

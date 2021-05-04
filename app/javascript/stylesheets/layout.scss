@@ -1,3 +1,8 @@
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .navbar-brand {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem !important;
@@ -14,4 +19,49 @@
 
 .content-area {
   min-height: 70vh;
+  padding-bottom: 30px;
+}
+
+a {
+  color: #5cb85c;
+
+  &:hover {
+    color: #448844;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+
+  &:hover {
+    background-color: #448844;
+    border-color: #448844;
+  }
+}
+
+.page-link {
+  color: #5cb85c;
+  border: 1px solid #5cb85c;
+
+  &:hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: #5cb85c;
+  }
+}
+
+.page-item.disabled .page-link {
+  color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn-primary {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+
+  &:hover {
+    background-color: #448844;
+    border-color: #448844;
+  }
 }

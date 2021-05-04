@@ -32,7 +32,7 @@
           <%= tag.name %>
         </span>
       <% end %>
-      <p class="mt-1 mb-1"><%= article.body %></p>
+      <p class="mt-1 mb-1"><%= article.body.truncate(15) %></p>
       <small class="text-muted">
         <%= link_to 'Read more...', article %>
       </small>

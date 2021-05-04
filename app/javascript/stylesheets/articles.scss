@@ -107,3 +107,16 @@
     }
   }
 }
+
+.form-check-input {
+  display: none;
+}
+
+.form-check {
+  padding-left: 0;
+  display: inline-block;
+}
+
+.form-check-input:checked + .badge {
+  background-color: #343a40;
+}
