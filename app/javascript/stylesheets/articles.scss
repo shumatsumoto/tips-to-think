@@ -18,3 +18,35 @@
   display: inline-block;
   width: auto;
 }
+
+.user-info {
+  color: #5cb85c;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.text-muted a {
+  max-width: 30%;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #bbb;
+  vertical-align: middle;
+}
+
+.badge-default {
+  color: #fff !important;
+  font-size: 0.7rem;
+  font-weight: normal;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  white-space: nowrap;
+  margin-right: 3px;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+  background-color: #818a91;
+}

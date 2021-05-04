@@ -3,15 +3,15 @@
 <%= form_with model: article do |f| %>
   <%= f.hidden_field :name %>
   <div class="form-group">
-    <%= f.label :title, 'タイトル' %>
+    <%= f.label :title, 'Title' %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :body, '内容' %>
+    <%= f.label :body, 'Content' %>
     <%= f.text_area :body, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
-    <span>タグ</span>
+    <span>Tags</span>
     <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
       <div class="form-check">
         <%= tag.label class: 'form-check-label' do %>

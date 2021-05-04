@@ -1,55 +1,43 @@
-<% if @current_user %>
-  <div class="mt-3">現在ログイン中のユーザー：<%= @current_user.name %></div>
-<% else %>
-  <div class="mt-3">現在ログインしていません</div>
-<% end %>
-
 <div class="d-flex align-items-center">
-  <h1>記事一覧</h1>
-  <div class="ml-auto articles__linkBox">
+  <div class="ml-auto articles__linkBox mt-4 mb-4">
     <%= form_with url: articles_path, method: :get, class: 'articles_searchForm' do %>
       <%= select_tag :tag_id, options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]), {
-        prompt: 'タグで絞り込み',
+        prompt: 'Filter by Tag',
         class: 'form-control articles__select',
         onChange: 'submit(this.form);'
       } %>
     <% end %>
-    <%= link_to '新規作成', new_article_path, class: 'btn btn-outline-dark' %>
   </div>
 </div>
+
 <% if flash[:notice] %>
   <div class="alert alert-danger">
     <%= flash[:notice] %>
   </div>
 <% end %>
-<table class="table table-hover articles__table">
-  <thead class="thead-dark">
-    <tr>
-      <th>ID</th>
-      <th>タイトル</th>
-      <th>作成者</th>
-      <th>作成日時</th>
-      <th>更新日時</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.id %></td>
-        <td><%= article.title %></td>
-        <td><%= article.name %></td>
-        <td><%= article.created_at.to_s(:datetime_jp) %></td>
-        <td><%= article.updated_at.to_s(:datetime_jp) %></td>
-        <td><%= link_to '詳細', article, class: 'btn btn-outline-dark' %></td>
-        <% if article.name == @current_user.name %>
-          <td><%= link_to '削除', article, class: 'btn btn-outline-dark', method: :delete %></td>
-        <% else %>
-          <td></td>
-        <% end %>
-      </tr>
-    <% end %>
-</table>
+
+<div class="list-group mb-5">
+  <% @articles.each do |article| %>
+    <div class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <div class="user-info mb-2">
+          <img class="user-image mr-2" src="https://static.productionready.io/images/smiley-cyrus.jpg">
+          <%= article.name %>
+        </div>
+        <small class="text-muted">update：<%= article.updated_at.to_s(:datetime_jp) %></small>
+      </div>
+      <h5><%= article.title %></h5>
+      <% article.tags.each do |tag| %>
+        <span class="badge badge-default">
+          <%= tag.name %>
+        </span>
+      <% end %>
+      <p class="mt-1 mb-1"><%= article.body %></p>
+      <small class="text-muted">
+        <%= link_to 'Read more...', article %>
+      </small>
+    </div>
+  <% end %>
+</div>
 
 <%= paginate @articles %>
