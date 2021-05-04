@@ -27,6 +27,8 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = Comment.new(article_id: @article.id)
+
+    @likes_count = Like.where(article_id: @article.id).count
   end
 
   def edit

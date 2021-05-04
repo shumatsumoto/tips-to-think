@@ -15,6 +15,16 @@
 
 <%= render @article %>
 
+<% if Like.find_by(user_id: @current_user.id, article_id: @article.id) %>
+  <%= link_to 'いいね！済み', like_destroy_path(@article), method: :post %>
+<% else %>
+  <%= link_to 'いいね！', like_create_path(@article), method: :post %>
+<% end %>
+
+<div class="mt-3">
+  いいね数：<%= @likes_count %>
+</div>
+
 <div class="p-comment__list">
   <div class="p-commment_listTitle">コメント</div>
   <%= render @article.comments %>
