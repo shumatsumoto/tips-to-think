@@ -69,6 +69,8 @@ http://localhost:3000
 
 - [フルスタックエンジニアが教える 即戦力Railsエンジニア養成講座](https://www.udemy.com/course/rails-kj/)
 - [ゼロからはじめる Dockerによるアプリケーション実行環境構築](https://www.udemy.com/course/docker-k/)
+- [いいね機能の作成](https://freecamp.life/rails-favorite/)
+- [フォロー・フォロワー機能の実装](https://freecamp.life/rails-follow-follower/)
 
 ## :hatching_chick: Author
 
