@@ -12,7 +12,7 @@
     <div class="user-info mb-2">
       <img class="user-image mr-1" src="https://static.productionready.io/images/smiley-cyrus.jpg">
       <span><%= article.name %></span>
-      <span class="likes-count">
+      <span class="ion">
         <% if Like.find_by(user_id: @current_user.id, article_id: @article.id) %>
           <%= link_to like_destroy_path(@article), method: :post, class: 'active' do %>
             <ion-icon name="heart"></ion-icon> <%= @likes_count %>

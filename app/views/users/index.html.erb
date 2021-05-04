@@ -9,10 +9,18 @@
   <dl>
     <dt><%= "id: #{user.id}" %></dt>
     <dd><%= "name: #{user.name}" %></dd>
-    <% if @current_user.following?(user) %>
-      <dd><%= link_to 'フォロー外す', unfollow_path(user.id), method: :post %></dd>
-    <% else %>
-      <dd><%= link_to 'フォローする', follow_path(user.id), method: :post %></dd>
-    <% end %>
+    <dd>
+      <span class="ion">
+        <% if @current_user.following?(user) %>
+          <%= link_to unfollow_path(user.id), method: :post do %>
+            <ion-icon name="person-remove"></ion-icon>
+          <% end %>
+        <% else %>
+          <%= link_to follow_path(user.id), method: :post do %>
+            <ion-icon name="person-add"></ion-icon>
+          <% end %>
+        <% end %>
+      </span>
+    </dd>
   </dl>
 <% end %>
