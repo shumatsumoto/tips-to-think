@@ -1,0 +1,37 @@
+<div class="d-flex align-items-center mt-4 mb-4">
+  <div class="ml-auto articles__linkBox">
+    <%= link_to 'Home', articles_path, class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+  <div class="alert alert-primary">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<h3 class="mb-4"><%= @user.name %></h3>
+
+<div class="list-group mb-5">
+  <% @articles.each do |article| %>
+    <div class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <div class="user-info mb-2">
+          <img class="user-image mr-2" src="https://static.productionready.io/images/smiley-cyrus.jpg">
+          <%= article.name %>
+        </div>
+        <small class="text-muted">update：<%= article.updated_at.to_s(:datetime_jp) %></small>
+      </div>
+      <h5><%= article.title %></h5>
+      <% article.tags.each do |tag| %>
+        <span class="badge badge-default">
+          <%= tag.name %>
+        </span>
+      <% end %>
+      <p class="mt-1 mb-1"><%= article.body.truncate(15) %></p>
+      <small class="text-muted">
+        <%= link_to 'Read more...', article %>
+      </small>
+    </div>
+  <% end %>
+</div>

@@ -4,23 +4,28 @@
   </div>
 <% end %>
 
-<h1>ユーザ一覧</h1>
-<% @users.each do |user| %>
-  <dl>
-    <dt><%= "id: #{user.id}" %></dt>
-    <dd><%= "name: #{user.name}" %></dd>
-    <dd>
-      <span class="ion">
-        <% if @current_user.following?(user) %>
-          <%= link_to unfollow_path(user.id), method: :post do %>
-            <ion-icon name="person-remove"></ion-icon>
-          <% end %>
-        <% else %>
-          <%= link_to follow_path(user.id), method: :post do %>
-            <ion-icon name="person-add"></ion-icon>
-          <% end %>
-        <% end %>
-      </span>
-    </dd>
-  </dl>
-<% end %>
+<h2 class="mt-4 mb-4">Users</h2>
+
+<div class="list-group mb-5">
+  <% @users.each do |user| %>
+    <div class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <div class="user-info mb-2">
+          <img class="user-image mr-2" src="https://static.productionready.io/images/smiley-cyrus.jpg">
+          <%= user.name %>
+          <span class="ion ml-2">
+            <% if @current_user.following?(user) %>
+              <%= link_to unfollow_path(user.id), method: :post do %>
+                <ion-icon name="person-remove"></ion-icon>
+              <% end %>
+            <% else %>
+              <%= link_to follow_path(user.id), method: :post do %>
+                <ion-icon name="person-add"></ion-icon>
+              <% end %>
+            <% end %>
+          </span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
