@@ -21,7 +21,8 @@
 
 ## :computer: URL
 
-Coming soon...
+[https://tips-to-think-shu0328.herokuapp.com/](https://tips-to-think-shu0328.herokuapp.com/)
+
 
 ## :pencil2: Overview
 
