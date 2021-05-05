@@ -12,7 +12,7 @@
       <div class="d-flex w-100 justify-content-between">
         <div class="user-info mb-2">
           <img class="user-image mr-2" src="https://static.productionready.io/images/smiley-cyrus.jpg">
-          <%= user.name %>
+          <%= link_to user.name, user_path(user) %>
           <span class="ion ml-2">
             <% if @current_user.following?(user) %>
               <%= link_to unfollow_path(user.id), method: :post do %>
