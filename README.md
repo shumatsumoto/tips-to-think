@@ -16,6 +16,9 @@
   </a>&nbsp;
   <a href="https://www.mysql.com/">
     <img src="https://user-images.githubusercontent.com/11171872/116212469-d0c21e80-a77f-11eb-93d7-c939066df710.png" height="90">
+  </a>&nbsp;
+  <a href="https://www.heroku.com/">
+    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="90">
   </a>
 </div>
 
@@ -37,6 +40,7 @@ I created a simple Blog application.
 - Ruby 2.7.1
 - MySql 5.7
 - Material Design for Bootstrap4
+- Heroku
 
 ## :pushpin: Usage
 
@@ -73,6 +77,7 @@ http://localhost:3000
 - [いいね機能の作成](https://freecamp.life/rails-favorite/)
 - [フォロー・フォロワー機能の実装](https://freecamp.life/rails-follow-follower/)
 - [必要だと気付いてもいなかったフロントエンド用リポジトリ7選](https://qiita.com/baby-degu/items/95a6b0018f46b0555f8c)
+- [HerokuにRailsアプリのDockerコンテナをプッシュするまで(MySQL 5.7)](https://qiita.com/take18k_tech/items/25a1147c481a37b423fc)
 - [ionicons](https://ionicons.com/)
 
 ## :hatching_chick: Author
