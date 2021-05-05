@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:name, :title, :body, tag_ids: [])
+      params.require(:article).permit(:name, :title, :body, tag_ids: []).merge(user_id: current_user.id)
     end
 
     def set_target_article

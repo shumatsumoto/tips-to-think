@@ -22,7 +22,7 @@
       <div class="d-flex w-100 justify-content-between">
         <div class="user-info mb-2">
           <img class="user-image mr-2" src="https://static.productionready.io/images/smiley-cyrus.jpg">
-          <%= article.name %>
+          <%= link_to article.name, user_path(article.user_id) %>
         </div>
         <small class="text-muted">update：<%= article.updated_at.to_s(:datetime_jp) %></small>
       </div>
