@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    redirect_to root_path unless current_user
     @comment = Comment.new(article_id: @article.id)
     @likes_count = Like.where(article_id: @article.id).count
   end

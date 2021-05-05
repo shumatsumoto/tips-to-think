@@ -1,4 +1,20 @@
 <h2 class="mt-4 mb-4">MyPage</h2>
-<div>
-  <%= @current_user.name %>
+
+<div class="card border-dark">
+  <div class="card-header">
+    <h4>
+      <img class="user-image mr-1" src="https://static.productionready.io/images/smiley-cyrus.jpg">
+      <span><%= @current_user.name %></span>
+    </h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">ID : <%= @current_user.id %></p>
+    <div class="user-info mb-2">
+      <p class="text-right mr-10">
+        <small class="text-muted">
+          <%= @current_user.created_at.to_s(:datetime_jp) %>
+        </small>
+      </p>
+    </div>
+  </div>
 </div>
