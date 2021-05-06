@@ -12,7 +12,7 @@
     <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="90">
   </a>&nbsp;
   <a href="https://mdbootstrap.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/113248502-119d5380-92f8-11eb-9b85-66678d9b5d46.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/117298781-b7714e80-aeb2-11eb-9c93-52a24f28328f.png" height="90">
   </a>&nbsp;
   <a href="https://www.mysql.com/">
     <img src="https://user-images.githubusercontent.com/11171872/116212469-d0c21e80-a77f-11eb-93d7-c939066df710.png" height="90">
