@@ -4,13 +4,25 @@
   </div>
 </div>
 
-<% if flash[:notice] %>
-  <div class="alert alert-primary">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
+<%= render 'application/flash' %>
 
-<h3 class="mb-4"><%= @user.name %></h3>
+<h3 class="mb-4">
+  <%= @user.name %>
+  <span class="ion ml-2">
+    <% if !(@current_user == @user) %>
+      <% if @current_user.following?(@user) %>
+        <%= link_to unfollow_path(@user.id), class: 'active', method: :post do %>
+          <ion-icon name="person-remove"></ion-icon>
+        <% end %>
+      <% else %>
+        <%= link_to follow_path(@user.id), method: :post do %>
+          <ion-icon name="person-add"></ion-icon>
+        <% end %>
+      <% end %>
+    <% end %>
+  </span>
+</h3>
+
 
 <div class="list-group mb-5">
   <% @articles.each do |article| %>

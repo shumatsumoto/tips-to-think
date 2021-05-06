@@ -11,19 +11,21 @@
     <p class="card-text"><%= simple_format(article.body) %></p>
     <div class="user-info mb-2">
       <img class="user-image mr-1" src="https://static.productionready.io/images/smiley-cyrus.jpg">
-      <span><%= article.name %></span>
-      <span class="ion">
-        <% if Like.find_by(user_id: @current_user.id, article_id: @article.id) %>
-          <%= link_to like_destroy_path(@article), method: :post, class: 'active' do %>
-            <ion-icon name="heart"></ion-icon> <%= @likes_count %>
+      <span><%= link_to article.name, user_path(article.user_id) %></span>
+      <div class="d-flex justify-content-end">
+        <span class="ion">
+          <% if Like.find_by(user_id: @current_user.id, article_id: @article.id) %>
+            <%= link_to like_destroy_path(@article), method: :post, class: 'active' do %>
+              <ion-icon name="heart"></ion-icon> <%= @likes_count %>
+            <% end %>
+          <% else %>
+            <%= link_to like_create_path(@article), method: :post do %>
+              <ion-icon name="heart"></ion-icon> <%= @likes_count %>
+            <% end %>
           <% end %>
-        <% else %>
-          <%= link_to like_create_path(@article), method: :post do %>
-            <ion-icon name="heart"></ion-icon> <%= @likes_count %>
-          <% end %>
-        <% end %>
-      </span>
-      <p class="text-right mr-10">
+        </span>
+      </div>
+      <p class="text-right mt-2">
         <small class="text-muted">
           <%= article.updated_at.to_s(:datetime_jp) %>
         </small>
