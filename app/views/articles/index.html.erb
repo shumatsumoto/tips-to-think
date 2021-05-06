@@ -29,9 +29,24 @@
         </span>
       <% end %>
       <p class="mt-1 mb-1"><%= article.body.truncate(15) %></p>
-      <small class="text-muted">
-        <%= link_to 'Read more...', article %>
-      </small>
+      <div class="d-flex justify-content-end">
+        <span class="ion">
+          <% if Like.find_by(user_id: @current_user.id, article_id: article.id) %>
+            <%= link_to like_destroy_path(article), method: :post, class: 'active' do %>
+              <ion-icon name="heart"></ion-icon> <%= Like.where(article_id: article.id).count %>
+            <% end %>
+          <% else %>
+            <%= link_to like_create_path(article), method: :post do %>
+              <ion-icon name="heart"></ion-icon> <%= Like.where(article_id: article.id).count %>
+            <% end %>
+          <% end %>
+        </span>
+      </div>
+      <div class="mt-2">
+        <small class="text-muted">
+          <%= link_to 'Read more...', article %>
+        </small>
+      </div>
     </div>
   <% end %>
 </div>
