@@ -68,7 +68,9 @@ http://localhost:3000
 - Tag filtering
 - Comment posting
 
-<img width="600" alt="ER図" src="https://user-images.githubusercontent.com/11171872/117029178-5f630c80-ad39-11eb-9427-53e65d4947ea.png">
+<div align="center">
+  <img width="550" alt="ER図" src="https://user-images.githubusercontent.com/11171872/117029178-5f630c80-ad39-11eb-9427-53e65d4947ea.png">
+</div>
 
 ## :green_book: Reference
 
