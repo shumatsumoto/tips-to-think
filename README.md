@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/11171872/117256767-094faf80-ae86-11eb-9b51-468b232c7704.gif" width="600">
+  <img src="https://user-images.githubusercontent.com/11171872/117256767-094faf80-ae86-11eb-9b51-468b232c7704.gif" width="550">
 </div>
 
 <h1 align="center">Tips To Think</h1>
