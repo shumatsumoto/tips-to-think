@@ -69,7 +69,7 @@ http://localhost:3000
 - Comment posting
 
 <div align="center">
-  <img width="550" alt="ER図" src="https://user-images.githubusercontent.com/11171872/118356993-bcb95200-b5b2-11eb-925a-fc3935cacf32.png">
+  <img width="400" alt="ER図" src="https://user-images.githubusercontent.com/11171872/118356993-bcb95200-b5b2-11eb-925a-fc3935cacf32.png">
 </div>
 
 ## :green_book: Reference
