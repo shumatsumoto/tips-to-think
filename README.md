@@ -1,24 +1,24 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/11171872/117256767-094faf80-ae86-11eb-9b51-468b232c7704.gif" width="550">
+  <img src="https://user-images.githubusercontent.com/11171872/117256767-094faf80-ae86-11eb-9b51-468b232c7704.gif" width="500">
 </div>
 
 <h1 align="center">Tips To Think</h1>
 
 <div align="center">
   <a href="https://www.docker.com/">
-    <img src="https://image.flaticon.com/icons/png/512/919/919853.png" height="55">
+    <img src="https://image.flaticon.com/icons/png/512/919/919853.png" height="35">
   </a>&nbsp;&nbsp;
   <a href="https://railsguides.jp/6_0_release_notes.html">
-    <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="55">
+    <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="35">
   </a>&nbsp;
   <a href="https://mdbootstrap.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/118204129-825b9200-b498-11eb-9fec-e3d72a2273b1.png" height="55">
+    <img src="https://user-images.githubusercontent.com/11171872/118204129-825b9200-b498-11eb-9fec-e3d72a2273b1.png" height="35">
   </a>&nbsp;
   <a href="https://www.mysql.com/">
-    <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png" height="55">
+    <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png" height="35">
   </a>&nbsp;&nbsp;&nbsp;
   <a href="https://www.heroku.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="55">
+    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="35">
   </a>
 </div>
 
