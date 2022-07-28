@@ -5,9 +5,6 @@
 <h1 align="center">Tips To Think</h1>
 
 <div align="center">
-  <a href="https://www.docker.com/">
-    <img src="https://image.flaticon.com/icons/png/512/919/919853.png" height="35">
-  </a>&nbsp;&nbsp;
   <a href="https://railsguides.jp/6_0_release_notes.html">
     <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="35">
   </a>&nbsp;
