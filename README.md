@@ -83,8 +83,3 @@ http://localhost:3000
 
 - [Github](https://github.com/shumatsumoto)
 - [Qiita](https://qiita.com/ShuMatsumoto)
-
-## :credit_card: Licence
-
-[MIT](https://......)
-
