@@ -19,11 +19,6 @@
   </a>
 </div>
 
-## :computer: URL
-
-[https://tips-to-think-shu0328.herokuapp.com/](https://tips-to-think-shu0328.herokuapp.com/)
-
-
 ## :pencil2: Overview
 
 I'm using Rails6 and Docker.
