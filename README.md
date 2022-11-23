@@ -25,7 +25,7 @@
 
 ## :pencil2: Overview
 
-Create a blog with Ruby on Rails
+Create a blog with Ruby on Rails.
 
 ## :hammer: Requirement
 
