@@ -25,8 +25,7 @@
 
 ## :pencil2: Overview
 
-I'm using Rails6 and Docker.
-I created a simple Blog application.
+Create a blog with Ruby on Rails
 
 ## :hammer: Requirement
 
